@@ -1,0 +1,19 @@
+baseURL = "http://example.org/"
+languageCode = "ja-jp"
+title = "一茶の手控え帳"
+author = "一茶"
+theme = "noteworthy"
+copyright = "Copyright © 2022 edge2992"
+
+[Params]
+# Social
+instagram = "https://www.instagram.com/_edge2992_/"
+twitter = "https://twitter.com/edge2992"
+booklog = "https://booklog.jp/users/b5adb46673671c7c"
+
+# Programming
+github = "https://github.com/edge2992"
+
+enableKofi = true
+kofi = "edge2992"
+
