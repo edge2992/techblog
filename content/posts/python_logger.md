@@ -7,7 +7,9 @@ tags: ["Python", "Library"]
 categories: ["Python"]
 ---
 
-## Loggerに関する覚書き
+pythonのLoggerメモです。
+<!--more-->
+### PythonのLoggerについて
 
 - logRecordが一行ずつのログのメッセージをもつクラスである。
 - loggerがlogRecordを生成し、Handlerが出力する
@@ -19,7 +21,7 @@ categories: ["Python"]
 
 それぞれのファイルでloggerを生成し、loggerでhandlerやLevelを設定する
 
-```python=
+```python
 from logging import getLogger,StreamHandler,DEBUG
 logger = getLogger(__name__)    #以降、このファイルでログが出たということがはっきりする。
 handler = StreamHandler()
@@ -32,7 +34,7 @@ logger.addHandler(handler)
 
 一番上の階層のファイル (main) でloggingをいじって、出力設定を一括で管理する
 
-```python=
+```python
 if __name__ == '__main__'
     logging.basicConfig(level=logging.DEBUG,
                         format='%(asctime)s- %(name)s - %(levelname)s - %(message)s')
@@ -51,7 +53,7 @@ if __name__ == '__main__'
 
 ### mylogger (例)
 
-```python=
+```python
 import logging
 import logging.handlers
 
