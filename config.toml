@@ -4,6 +4,7 @@ title = "一茶の手控え帳"
 author = "一茶"
 theme = "noteworthy"
 copyright = "Copyright © 2022 edge2992"
+hasCJKLanguage = true
 
 [Params]
 # Social
@@ -16,4 +17,5 @@ github = "https://github.com/edge2992"
 
 enableKofi = true
 kofi = "edge2992"
+
 
