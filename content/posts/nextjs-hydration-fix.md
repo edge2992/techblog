@@ -1,10 +1,15 @@
 ---
 title: "React v18 + NextjsでのHydration failedの回避"
 date: 2022-10-14T00:05:18+09:00
+description: "React v18 + NextjsでのHydration failedの回避"
+tags: ["typescript", "nextjs"]
+categories: ["typescript"]
 draft: false
 ---
 
 Nextjsを使用して、SSR対応のサイトを作成していたところエラーが発生するようになった。
+SSRとクライアントレンダリングの間にHTML構造に差異があることが原因となっていた。
+<!--more-->
 
 ## エラー内容
 
