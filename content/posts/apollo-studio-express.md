@@ -1,12 +1,12 @@
 ---
-title: "Apollo Studioとローカル環境で立ち上げたGraphQL Expressサーバー間でクッキーを使用する"
+title: "Apollo Studioとローカル環境で立ち上げたGraphQL Expressサーバー間でCookieを使用する"
 date: 2022-10-15T19:32:00+09:00
 tags: ["typescript", "express"]
 categories: ["typescript"]
 draft: false
 ---
 
-NodeJSでGraphQLバックエンドサーバーをapollo-serverとexpressを使用して立ち上げた際、Apollo StudioからGraphQLの確認を行うにあたり、クッキーの設定に数日悩んだので解決方法を共有します。
+NodeJSでGraphQLバックエンドサーバーをapollo-serverとexpressを使用して立ち上げた際、Apollo StudioからGraphQLの確認を行うにあたり、Cookieの設定に数日悩んだので解決方法を共有します。
 <!--more-->
 
 行うことは以下の三点です。
@@ -34,9 +34,10 @@ apollo stuioのウェブサイトでhttps://localhost:4000/graphqlとの通信�
 app.set("trust proxy", 1)
 ```
 
-### 2.2 apollo studioからのレスポンスのヘッダにX-Forwarded-Proto httpsを追加する。
+### 2.2 apollo studioからのリクエストのヘッダにX-Forwarded-Proto httpsを追加する。
 
 プロキシとapollo studio間がHTTPS通信であることを知らせる。
+![X-forwarded-proto](/img/634a9ad604bfcac0e454b030.png)
 
 
 ## 3. Cookieの設定を行う
