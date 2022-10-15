@@ -62,7 +62,8 @@ SameSite Noneとsecure: trueを設定する。
     })
   )
 ```
-
+## 参考サイト
+- [GraphQL, Apollo Studio, and Cookies](https://blog.devgenius.io/graphql-apollo-studio-and-cookies-5d8519d0ca7e)
 
 ## サーバーを立ち上げるコード
 
