@@ -23,4 +23,9 @@ enableKofi = true
 kofi = "edge2992"
 
 
+[[menu.main]]
+  identifier = "tags"
+  name = "Tags"
+  url = "/tags/"
+  weight = 2
 
