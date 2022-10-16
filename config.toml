@@ -6,6 +6,10 @@ theme = "noteworthy"
 copyright = "Copyright © 2022 edge2992"
 hasCJKLanguage = true
 
+# google Analytics
+googleAnalytics = "G-DRTM341QYF"
+disqusShortname = "tech-edge2992"
+
 [Params]
 # Social
 instagram = "https://www.instagram.com/_edge2992_/"
@@ -18,7 +22,5 @@ github = "https://github.com/edge2992"
 enableKofi = true
 kofi = "edge2992"
 
-# google Analytics
-googleAnalytics = "G-DRTM341QYF"
 
 
