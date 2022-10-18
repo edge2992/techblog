@@ -3,6 +3,7 @@ languageCode = "ja-jp"
 title = "一茶の手控え帳"
 author = "一茶"
 theme = "noteworthy"
+enableRobotsTXT = true
 copyright = "Copyright © 2022 edge2992"
 hasCJKLanguage = true
 
