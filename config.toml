@@ -1,7 +1,7 @@
 baseURL = "https://tech.edge2992.dev/"
 languageCode = "ja-jp"
-title = "一茶の手控え帳"
-author = "一茶"
+title = "えじっさの技術メモ"
+author = "えじっさ"
 theme = "noteworthy"
 enableRobotsTXT = true
 copyright = "Copyright © 2022 edge2992"
@@ -14,7 +14,7 @@ disqusShortname = "tech-edge2992"
 [Params]
 # Social
 instagram = "https://www.instagram.com/_edge2992_/"
-twitter = "https://twitter.com/edge2992"
+twitter = "https://twitter.com/edgissa"
 booklog = "https://booklog.jp/users/b5adb46673671c7c"
 
 # Programming
