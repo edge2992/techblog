@@ -23,6 +23,13 @@ github = "https://github.com/edge2992"
 enableKofi = true
 kofi = "edge2992"
 
+# OpenGraph
+description = "紅茶が好きなサーバーサイドエンジニアの備忘録"
+images = ["img/ogp_default.jpg"]
+title = "えじっさの技術メモ"
+
+[taxonomies]
+series = "series"
 
 [[menu.main]]
   identifier = "tags"
