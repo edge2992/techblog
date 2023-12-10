@@ -4,7 +4,7 @@ author: ["えじっさ"]
 date: 2023-12-05T19:50:14+09:00
 tags: ["isucon", "golang"]
 images:
-  - "img/og/isucon13_overcached.md"
+  - "img/og/isucon13_overcached.png"
 categories: ["isucon"]
 draft: false
 ---
