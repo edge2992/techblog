@@ -1,0 +1,39 @@
+template: static/ogp/template.png
+title:
+  start:
+    px: 170
+    pY: 262
+  fgHexColor: "#FFFFFF"
+  fontSize: 60
+  fontStyle: Bold
+  maxWidth: 900
+  lineSpacing: 10
+category:
+  start:
+    px: 150
+    py: 211
+  fgHexColor: "#E5B52A"
+  fontSize: 42
+  fontStyle: Regular
+info:
+  start:
+    px: 270
+    py: 130
+  fgHexColor: "#A0A0A0"
+  fontSize: 38
+  fontStyle: Regular
+tags:
+  start:
+    px: 180
+    py: 500
+  fgHexColor: "#FFFFFF"
+  bgHexColor: "#7F7776"
+  fontSize: 22
+  fontStyle: Medium
+  boxAlign: Left
+  boxSpacing: 6
+  boxPadding:
+    top: 6
+    right: 10
+    bottom: 6
+    left: 8

@@ -1,7 +1,10 @@
 ---
 title: "ISUCON13に初参加しました (26,597点)"
+author: ["えじっさ"]
 date: 2023-12-05T19:50:14+09:00
 tags: ["isucon", "golang"]
+images:
+  - "img/og/isucon13_overcached.md"
 categories: ["isucon"]
 draft: false
 ---
