@@ -1,15 +1,15 @@
 ---
-title: "Commit_code_review_chatgpt_api"
+title: "ChatGPT APIでコードレビューやコミットメッセージ生成を行う"
+author: ["えじっさ"]
+tags: ["chatgpt", "ai"]
 date: 2023-12-07T00:26:56+09:00
+images:
+  - "img/og/commit_code_review_chatgpt_api.png"
+categories: ["tool"]
 draft: false
 ---
 
-Backend Group の Inventory チームに所属している井澤です。
-新卒で HomeLife に配属となり早五ヶ月目となります。
-// TODO
-前回の記事は〇〇でした。
-
-さて、2023 年を振り返ってみると生成 AI が話題でした。
+2023 年を振り返ってみると生成 AI が話題でした。
 私も chatGPT には 1 年弱ほどお布施をしつづけていて、最近はダイエットのためのトレーニングメニューを立ててもらったり、お酒選びに付き合ってもらったりするのに使いました。
 業務でも単純なスクリプトを書いてもらったり、関数や変数の命名に困ったときにはこっそり使っています。 (プログラム自体は入力しないように気をつけながら...)
 
@@ -40,7 +40,7 @@ feat: add LinkCollector class to scrape links from HTML content
 前述の通り、ChatGPT API でコミット時にメッセージを自動生成する CLI ツールです。
 設定をすると以下のように commit するとコミットメッセージが予め記入された状態で指定されているエディター (vi) が立ち上がります。
 
-// TODO gif を作成する
+![commit gif](/img/codereview/auto_commit.gif)
 
 自動生成されたコミットに不満がなければそのままエディタのメッセージを保存して終了すればいつもどおりコミットすることができます。
 
@@ -107,11 +107,12 @@ chatGPT API でコードレビューをしてもらうプロジェクトです�
 私の個人開発では以下のように沢山コードレビューをもらっています。
 右側のコメントはほどんど ChatGPT のコードレビューです。
 一人で開発している寂しさが薄まるという隠れたメリットがあります。
+
 ![code-review](/img/codereview/codereview_sample.png)
 
 実際にコードレビューされている例は次のようになります。
+
 ![code-review](/img/codereview/review_sample1.png)
-![code-review](/img/codereview/review_sample2.png)
 
 ### 設定方法
 
@@ -119,7 +120,7 @@ github action を設定します。
 .github/workflows/cr.yml に以下の設定を書いています。
 別途 SECRET に GITHUB_TOKEN と OPENAI_API_KEY を設定する必要があります。
 
-```
+```yaml
 name: Code Review
 
 permissions:

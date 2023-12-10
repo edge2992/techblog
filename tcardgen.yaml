@@ -2,11 +2,11 @@ template: static/ogp/template.png
 title:
   start:
     px: 170
-    pY: 252
+    pY: 262
   fgHexColor: "#FFFFFF"
   fontSize: 60
   fontStyle: Bold
-  maxWidth: 1000
+  maxWidth: 900
   lineSpacing: 10
 category:
   start:
