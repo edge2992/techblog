@@ -28,9 +28,6 @@ description = "紅茶が好きなサーバーサイドエンジニアの備忘�
 images = ["img/ogp_default.jpg"]
 title = "えじっさの技術メモ"
 
-[taxonomies]
-series = "series"
-
 [[menu.main]]
   identifier = "tags"
   name = "Tags"
