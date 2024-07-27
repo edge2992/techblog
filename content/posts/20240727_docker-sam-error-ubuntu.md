@@ -4,7 +4,7 @@ author: ["えじっさ"]
 date: 2024-07-27T21:31:12+09:00
 tags: ["AWS", "Lambda"]
 images:
-  - "img/og/20240727_docker Sam Error Ubuntu.png"
+  - "img/og/20240727_docker-sam-error-ubuntu.png"
 categories: ["AWS", "Lambda"]
 draft: false
 ---
