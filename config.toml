@@ -11,22 +11,24 @@ hasCJKLanguage = true
 googleAnalytics = "G-DRTM341QYF"
 disqusShortname = "tech-edge2992"
 
-[Params]
-# Social
-instagram = "https://www.instagram.com/_edge2992_/"
-twitter = "https://twitter.com/edgissa"
-booklog = "https://booklog.jp/users/b5adb46673671c7c"
+[params]
+  # Social
+  instagram = "https://www.instagram.com/_edge2992_/"
+  twitter = "https://twitter.com/edgissa"
+  booklog = "https://booklog.jp/users/b5adb46673671c7c"
 
-# Programming
-github = "https://github.com/edge2992"
+  # Programming
+  github = "https://github.com/edge2992"
 
-enableKofi = true
-kofi = "edge2992"
+  enableKofi = true
+  kofi = "edge2992"
 
-# OpenGraph
-description = "紅茶が好きなサーバーサイドエンジニアの備忘録"
-images = ["img/ogp_default.jpg"]
-title = "えじっさの技術メモ"
+  # OpenGraph
+  description = "紅茶が好きなサーバーサイドエンジニアの備忘録"
+  images = ["img/ogp_default.jpg"]
+  title = "えじっさの技術メモ"
+
+  favicon = "img/favicon.ico"
 
 [[menu.main]]
   identifier = "tags"
