@@ -5,7 +5,7 @@ date: 2025-01-25T11:16:21+09:00
 draft: false
 ---
 
-![profile](./profile.jpg)
+{{< figure src="./profile.jpg" width=200 >}}
 
 ## えじっさ ([@edgissa](https://twitter.com/edgissa))
 
@@ -25,4 +25,4 @@ Rakutenでエンジニアをしています。
 
 ## 連絡先
 
-[@edgissa](https://twitter.com/edgissa)のDMまで
+[@edgissa](https://twitter.com/edgissa)のDMまで。

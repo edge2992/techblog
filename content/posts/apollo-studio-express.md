@@ -6,21 +6,24 @@ categories: ["typescript"]
 draft: false
 ---
 
-NodeJSでGraphQLバックエンドサーバーをapollo-serverとexpressを使用して立ち上げた際、Apollo StudioからGraphQLの確認を行うにあたり、Cookieの設定に数日悩んだので解決方法を共有します。
+NodeJSでGraphQLバックエンドサーバーをapollo-serverとexpressを使用して立ち上げた際、Apollo StudioからGraphQLの確認をしたいです。
+その際、Cookieの設定に数日悩んだので解決方法を共有します。
+
 <!--more-->
 
-行うことは以下の三点です。
+行うことは次の三点です。
 
 ## 1. CORSの設定
 
 ### Acceess-Control-Allow-OriginとAccess-Control-Allow-Credentialの設定をする
 
-
 ```typescript
-  app.use(cors({
+app.use(
+  cors({
     origin: ["http://localhost:3000", "https://studio.apollographql.com"],
-    credentials: true
-  }))
+    credentials: true,
+  }),
+);
 ```
 
 ## 2.プロキシの設定
@@ -28,7 +31,6 @@ NodeJSでGraphQLバックエンドサーバーをapollo-serverとexpressを使�
 apollo stuioのウェブサイトでhttps://localhost:4000/graphqlとの通信を行う際にプロキシで中継しているため、以下の二点を追加します。
 
 ### 2.1 expressサーバーに1回までproxyを信頼させる。
-
 
 ```
 app.set("trust proxy", 1)
@@ -38,7 +40,6 @@ app.set("trust proxy", 1)
 
 プロキシとapollo studio間がHTTPS通信であることを知らせる。
 ![X-forwarded-proto](/img/634a9ad604bfcac0e454b030.png)
-
 
 ## 3. Cookieの設定を行う
 
@@ -63,13 +64,14 @@ SameSite Noneとsecure: trueを設定する。
     })
   )
 ```
+
 ## 参考サイト
+
 - [GraphQL, Apollo Studio, and Cookies](https://blog.devgenius.io/graphql-apollo-studio-and-cookies-5d8519d0ca7e)
 
 ## サーバーを立ち上げるコード
 
 使用したコードは以下となります。
-
 
 ```typescript
 import "reflect-metadata";
@@ -148,5 +150,3 @@ main().catch(err => {
   console.log(err);
 });
 ```
-
-
