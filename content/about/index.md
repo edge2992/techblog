@@ -25,4 +25,4 @@ Rakutenでエンジニアをしています。
 
 ## 連絡先
 
-[@edgissa](https://twitter.com/edgissa)のDMまで
+[@edgissa](https://twitter.com/edgissa)のDMまで。
