@@ -1,0 +1,10 @@
+{
+  "filters": {},
+  "rules": {
+    "preset-ja-technical-writing": true,
+    "sentence-length": false,
+    "prh": {
+      "rulePaths" :["./prh-rules/WEB_DB_PRESS.yml"]
+    }
+  }
+}
