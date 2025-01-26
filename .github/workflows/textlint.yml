@@ -15,10 +15,11 @@ jobs:
       - uses: actions/setup-node@v3
       - uses: reviewdog/action-setup@v1
       - name: install textlint
-        run: npm install textlint textlint-rule-preset-smarthr
+        run: npm install textlint textlint-rule-preset-ja-technical-writing @proofdict/textlint-rule-proofdict
       - name: output textlint results in reviewdog
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REVIEWDOG_DEBUG: "true"
         run: |
           npx textlint -f checkstyle . |\
           reviewdog -f=checkstyle -name="textlint" -reporter=github-pr-review -level=info
