@@ -11,7 +11,7 @@ draft: false
 
 ## 事象
 
-AWS SAM (Serverless Application Model)を利用してlambda関数をローカル実行しようとした際、以下のエラーが発生することがあります。
+AWS SAM (Serverless Application Model)を利用してlambda関数をローカル実行しようとした際、次のエラーが発生しました。
 
 ```bash
 $ echo {} | sam local invoke HelloWorldFunction
@@ -22,7 +22,7 @@ Error: Running AWS SAM projects locally requires Docker. Have you got it install
 
 dockerのインストールができていない場合はdockerをインストールしてください。
 ここでは、dockerは起動しているもののSAM CLIがdockerを認識していない場合の対応について解説します。
-以下のコマンドを実行することでdocker daemonが起動しているかどうかを確認できます。
+次のコマンドを実行することでdocker daemonが起動しているかどうかを確認できます。
 筆者の環境はUbuntu 22.04です。
 
 ```bash
@@ -41,13 +41,13 @@ $ echo {} | DOCKER_HOST=unix:///home/edge2992/.docker/desktop/docker.sock sam lo
 
 samが見に行っているdockerのcontextがデーモンとして起動しているdockerと異なる際に発生しているようです。
 dockerコマンド外からの接続には指定しているcontextが使われず、DOCKER_HOSTが利用されています。
-contextは以下のように確認できます。
+contextは次のように確認できます。
 
 ```bash
 $ docker context ls
 NAME                TYPE                DESCRIPTION                               DOCKER ENDPOINT                                     KUBERNETES ENDPOINT   ORCHESTRATOR
-default             moby                Current DOCKER_HOST based configuration   unix:///var/run/docker.sock                                               
-desktop-linux *     moby                Docker Desktop                            unix:///home/edge2992/.docker/desktop/docker.sock      
+default             moby                Current DOCKER_HOST based configuration   unix:///var/run/docker.sock
+desktop-linux *     moby                Docker Desktop                            unix:///home/edge2992/.docker/desktop/docker.sock
 
 ```
 
@@ -56,12 +56,3 @@ desktop-linux *     moby                Docker Desktop                          
 ## 参考
 
 - [Bug: Error: Docker is not reachable (even though it is!) #4329](https://github.com/aws/aws-sam-cli/issues/4329)
-
-
-
-
-
-
-
-
-

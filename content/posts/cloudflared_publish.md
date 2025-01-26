@@ -14,13 +14,13 @@ cloudflare の CLI を使って WEB サービスを公開してみる。
 
 ## cloudflared をインストールする
 
-以下を参考にインストールする
+以下を参考にインストールする。
 
 https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/create-local-tunnel/#1-download-and-install-cloudflared
 
 ## cloudflared login
 
-登録する予定のドメインでログインする
+登録する予定のドメインでログインする。
 
 ```
 cloudflared tunnel login
@@ -45,7 +45,7 @@ Created tunnel <tunnel-name> with id <uuid>
 
 ## ルーティング設定
 
-cloudflare の DNS に任意のサブドメインのアクセスが来たら、設定したトンネルにトラフィックを流すように設定する
+cloudflare の DNS に任意のサブドメインのアクセスが来たら、設定したトンネルにトラフィックを流すように設定する。
 
 ```
 root@tool-box:~/.cloudflared# cloudflared tunnel route dns <tunnel-name> <subdomain-name>
@@ -55,7 +55,7 @@ root@tool-box:~/.cloudflared# cloudflared tunnel route dns <tunnel-name> <subdom
 ## ルーティング設定（内部ネットワーク向け）
 
 トンネルからトラフィックが来たら、そのトラフィックをどこに向けるかを設定する。
-.cloudflared/config.yml を記入する
+.cloudflared/config.yml を記入する。
 
 ```
 url: http://localhost:8000

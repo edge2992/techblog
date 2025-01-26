@@ -8,7 +8,9 @@ categories: ["Python"]
 ---
 
 pythonのLoggerメモです。
+
 <!--more-->
+
 ### PythonのLoggerについて
 
 - logRecordが一行ずつのログのメッセージをもつクラスである。
@@ -19,7 +21,7 @@ pythonのLoggerメモです。
 
 ## それぞれのモジュールはこのように書く (基本)
 
-それぞれのファイルでloggerを生成し、loggerでhandlerやLevelを設定する
+それぞれのファイルでloggerを生成し、loggerでhandlerやLevelを設定する。
 
 ```python
 from logging import getLogger,StreamHandler,DEBUG
@@ -32,7 +34,7 @@ logger.addHandler(handler)
 
 ## メインのファイルでbasicConfigをいじる
 
-一番上の階層のファイル (main) でloggingをいじって、出力設定を一括で管理する
+一番上の階層のファイル (main) でloggingをいじって、出力設定を一括で管理する。
 
 ```python
 if __name__ == '__main__'
@@ -49,7 +51,7 @@ if __name__ == '__main__'
 
 - [pythonのロギングに関するメモ](http://joemphilips.com/post/python_logging/)
 - [【Python】ロギングのベタープラクティス](https://qiita.com/ryoheiszk/items/362ae8ce344966b5516c)
-  - ファイルごとにformetterやHandlerをいじるのは面倒なので、setLoggerなどの便利関数を作成しておいて、ファイルごとにこの関数を呼び出すことで一括で管理してしまう選択肢もある
+  - ファイルごとに formatter や Handler を設定するのは面倒である。そこで、setLogger のような便利関数を作成する方法がある
 
 ### mylogger (例)
 

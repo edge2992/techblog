@@ -8,7 +8,8 @@ draft: false
 ---
 
 Nextjsを使用して、SSR対応のサイトを作成していたところエラーが発生するようになった。
-SSRとクライアントレンダリングの間にHTML構造に差異があることが原因となっていた。
+SSRとクライアントレンダリングの間で、HTML構造に違いがありました。
+
 <!--more-->
 
 ## エラー内容
@@ -20,20 +21,18 @@ See more info here: https://nextjs.org/docs/messages/react-hydration-error
 ```
 
 ```
-next-dev.js?3515:20 Warning: An error occurred during hydration. The server HTML was replaced with client content in <div>. 
+next-dev.js?3515:20 Warning: An error occurred during hydration. The server HTML was replaced with client content in <div>.
 
 See more info here: https://nextjs.org/docs/messages/react-hydration-error
 ```
 
-
 ## 原因
 
-サーバーでのレンダリングとクライアントでのレンダリングでHTMLのタグに差異があることがエラー発生の原因になっているらしい。
+原因は, サーバーでのレンダリングとクライアントでのレンダリングでHTML構造に差が生じていることでした。
 
 ### 該当箇所
 
 NavBarで、body変数内のレンダリングを変更させているところでエラーが出ていた。
-
 
 ```typescript
 import { Box, Button, Flex, Link } from "@chakra-ui/react";
@@ -92,13 +91,11 @@ export const NavBar: React.FC<NavBarProps> = ({}) => {
 };
 ```
 
-
 ## 対策 (本質的でない)
 
 navBarのコンポーネントを使用する場所で、
 [dynamic import](https://nextjs.org/docs/advanced-features/dynamic-import#with-no-ssr)
 を使用してnavBarコンポーネントのサーバーでのレンダリングを回避する。
-
 
 ```typescript
 import dynamic from "next/dynamic";
