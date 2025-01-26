@@ -36,3 +36,11 @@ disqusShortname = "tech-edge2992"
   url = "/tags/"
   weight = 2
 
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 3
+
+[markup]
+  defaultMarkdownHandler = 'goldmark'
