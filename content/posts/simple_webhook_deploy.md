@@ -129,7 +129,7 @@ func main() {
 
 ## GitHub Actions 設定
 
-以下のようにしました。.github/actions/deploy-webhook.yml に書いています。
+次のようにしました。.github/actions/deploy-webhook.yml に書いています。
 main が更新される度に webhook を送信します。
 secrets に WEBHOOK_SECRET と WEBHOOK_URL を設定する必要があります。
 

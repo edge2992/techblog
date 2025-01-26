@@ -24,10 +24,10 @@ CDK の実装が溜まってくると、過去のプロジェクトからコー�
 
 ## Lambda 用 construct
 
-construct は以下のように生成しています。
+construct は次のように生成しています。
 `rm -rf build/libs`は IDE 側で`./gradlew build`すると普通の Jar が生成されてしまいます。そのため、ビルド前に消して Fat Jar のほうをアップロードされるようにしています。
 
-`GRADLE_USER_HOME`の指定がないと以下のエラーが出てビルドに失敗します。
+`GRADLE_USER_HOME`の指定がないと次のエラーが出てビルドに失敗します。
 
 > Exception in thread "main" java.lang.RuntimeException: Could not create parent directory for lock file /.gradle/wrapper/dists/gradle-8.4-bin/1w5dpkrfk8irigvoxmyhowfim/gradle-8.4-bin.zip.lck
 

@@ -6,7 +6,7 @@ categories: ["proxmox"]
 draft: false
 ---
 
-この記事では、あらかじめ作成されているzpoolをproxmox上のTrueNASにマウントする方法を説明します。以下のようなディスク構成のZFSをTrueNASにマウントすることを目的としています。
+この記事では、あらかじめ作成されているzpoolをproxmox上のTrueNASにマウントする方法を説明します。次のようなディスク構成のZFSをTrueNASにマウントすることを目的としています。
 
 ```bash
 root@pve:~# fdisk -l
@@ -53,7 +53,7 @@ qm set <VM_ID> -scsi1 /dev/disk/by-id/<TARGET_DISK>
 
 ## TrueNASのGUIで既存のzpoolを登録する
 
-TrueNASのGUIのStorage/Poolの画面から、以下の手順で既存のzpoolを登録します。
+TrueNASのGUIのStorage/Poolの画面から、次の手順で既存のzpoolを登録します。
 
 1. "ADD"ボタンをクリックします。
 2. "import an existing pool"を選択し、必要な情報を入力します。

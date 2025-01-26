@@ -21,7 +21,7 @@ draft: false
 git の hook を使って、コミット時に差分を入力として chatGPT API にコミットメッセージを作ってもらう方法です。
 この手のツールは色々ありますが、自分が検討していた 2023 年 4 月の時点では一番 star 数が多そうだった
 [di-sukharev/opencommit](https://github.com/di-sukharev/opencommit) を使っているため、そちらを紹介したいと思います。
-以下のようなコミットメッセージを自動生成することができます。
+次のようなコミットメッセージを自動生成できます。
 
 ```
 feat: add LinkCollector class to scrape links from HTML content
@@ -38,11 +38,11 @@ feat: add LinkCollector class to scrape links from HTML content
 ### di-sukharev/opencommit の紹介
 
 前述の通り、ChatGPT API でコミット時にメッセージを自動生成する CLI ツールです。
-設定をすると以下のように commit するとコミットメッセージが予め記入された状態で指定されているエディター (vi) が立ち上がります。
+設定をすると次のように commit するとコミットメッセージが予め記入された状態で指定されているエディター (vi) が立ち上がります。
 
 ![commit gif](/img/codereview/auto_commit.gif)
 
-自動生成されたコミットに不満がなければそのままエディタのメッセージを保存して終了すればいつもどおりコミットすることができます。
+自動生成されたコミットに不満がなければそのままエディタのメッセージを保存して終了すればいつもどおりコミットできます。
 
 ChatGPT の入力に制限があるので、沢山のファイルを編集している場合はある程度の差分ごとに API で問い合わせてその都度 Commit の Title 生成を行います。
 エディタ上にはすべての出力がつながって表示されるので、私はその中から一番良さそうな commit message を選んで先頭に持ってきています。
@@ -93,7 +93,7 @@ oco hook set
 API は従量課金で、gpt-3.5-turbo では 0.002 ドル/1K tokens となっています。（token = 単語数）
 1 行 80 文字で 1 単語 5 文字と仮定すると 3 万行ほどコミットすると 1 ドル請求されることになります。
 
-私が業務時間後に遊ぶ分にはほとんど無料で使用することができています。
+私が業務時間後に遊ぶ分にはほとんど無料で使用できています。
 
 ## プルリクエストのコードレビュー
 
@@ -104,7 +104,7 @@ github actions を使って、プルリク作成時にコードレビューを c
 ### anc95/ChatGPT-CodeReview の紹介
 
 chatGPT API でコードレビューをしてもらうプロジェクトです。
-私の個人開発では以下のように沢山コードレビューをもらっています。
+私の個人開発では次のように沢山コードレビューをもらっています。
 右側のコメントはほどんど ChatGPT のコードレビューです。
 一人で開発している寂しさが薄まるという隠れたメリットがあります。
 
@@ -117,7 +117,7 @@ chatGPT API でコードレビューをしてもらうプロジェクトです�
 ### 設定方法
 
 github action を設定します。
-.github/workflows/cr.yml に以下の設定を書いています。
+.github/workflows/cr.yml に次の設定を書いています。
 別途 SECRET に GITHUB_TOKEN と OPENAI_API_KEY を設定する必要があります。
 
 ```yaml

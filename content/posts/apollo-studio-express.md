@@ -9,7 +9,7 @@ draft: false
 NodeJSでGraphQLバックエンドサーバーをapollo-serverとexpressを使用して立ち上げた際、Apollo StudioからGraphQLの確認を行うにあたり、Cookieの設定に数日悩んだので解決方法を共有します。
 <!--more-->
 
-行うことは以下の三点です。
+行うことは次の三点です。
 
 ## 1. CORSの設定
 
