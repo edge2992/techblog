@@ -11,7 +11,7 @@ draft: false
 
 ## 事象
 
-AWS SAM (Serverless Application Model)を利用してlambda関数をローカル実行しようとした際、次のエラーが発生することがあります。
+AWS SAM (Serverless Application Model)を利用してlambda関数をローカル実行しようとした際、次のエラーが発生しました。
 
 ```bash
 $ echo {} | sam local invoke HelloWorldFunction
@@ -46,8 +46,8 @@ contextは次のように確認できます。
 ```bash
 $ docker context ls
 NAME                TYPE                DESCRIPTION                               DOCKER ENDPOINT                                     KUBERNETES ENDPOINT   ORCHESTRATOR
-default             moby                Current DOCKER_HOST based configuration   unix:///var/run/docker.sock                                               
-desktop-linux *     moby                Docker Desktop                            unix:///home/edge2992/.docker/desktop/docker.sock      
+default             moby                Current DOCKER_HOST based configuration   unix:///var/run/docker.sock
+desktop-linux *     moby                Docker Desktop                            unix:///home/edge2992/.docker/desktop/docker.sock
 
 ```
 
@@ -56,12 +56,3 @@ desktop-linux *     moby                Docker Desktop                          
 ## 参考
 
 - [Bug: Error: Docker is not reachable (even though it is!) #4329](https://github.com/aws/aws-sam-cli/issues/4329)
-
-
-
-
-
-
-
-
-
