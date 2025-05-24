@@ -2,10 +2,6 @@
 title: "Skills"
 author: ["えじっさ"]
 date: 2025-05-25T01:07:09+09:00
-tags: []
-images:
-  - "img/og/Skills.png"
-categories: []
 draft: false
 ---
 
