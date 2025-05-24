@@ -11,17 +11,19 @@ draft: false
 
 Rakutenでエンジニアをしています。
 
-インフラ/アプリの両方を活用したいと思っています。
-
-## プログラミング
-
 - Github: [edge2992](https://github.com/edge2992)
 - Atcoder: [edge2992](https://atcoder.jp/users/edge2992)
 
 ## 興味関心
 
+インフラ/アプリの両方を活用したいと思っています。
+
 - ソフトウェアの性能可視化と改善
 - ソフトウェアの運用可用性の向上
+
+## スキルセット
+
+[skills](./skills)を参照してください。
 
 ## 連絡先
 
