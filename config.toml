@@ -31,16 +31,23 @@ disqusShortname = "tech-edge2992"
   favicon = "img/favicon.ico"
 
 [[menu.main]]
-  identifier = "tags"
-  name = "Tags"
-  url = "/tags/"
-  weight = 2
+  identifier = "posts"
+  name = "Posts"
+  url = "/"
+  weight =1 
 
 [[menu.main]]
   identifier = "about"
   name = "About"
-  url = "/about/"
-  weight = 3
+  url = "/about/me"
+  weight = 2
+
+[[menu.main]]
+  identifier = "tags"
+  name = "Tags"
+  url = "/tags/"
+  weight = 3 
+
 
 [markup]
   defaultMarkdownHandler = 'goldmark'

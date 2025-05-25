@@ -23,7 +23,7 @@ Rakutenでエンジニアをしています。
 
 ## スキルセット
 
-[skills](./skills/skills)を参照してください。
+[skills](./../skills/)を参照してください。
 
 ## 連絡先
 
