@@ -1,5 +1,5 @@
 ---
-title: "VSCode, Chromeがibus-mozcで日本語入力できなかったのでfxitx5に移行した (Ubuntu 22.04)"
+title: "VSCode, Chromeがibus-mozcで日本語入力できなかったのでfcitx5に移行した (Ubuntu 22.04)"
 author: ["えじっさ"]
 date: 2025-06-28T12:20:28+09:00
 tags: ["ubuntu"]
