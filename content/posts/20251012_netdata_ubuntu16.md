@@ -10,11 +10,11 @@ categories: ['netdata', 'Ubuntu16.04']
 draft: false
 ---
 
-netdataの推奨されるインストール方法は kickstart.sh を使うこと.
-しかし、netdataのページで推奨されているcommandをUbuntu 16.04で実行すると, netdata-repo-edge_5-1+ubuntu16.04_all.deb が 404 になる.
+netdataの推奨されるインストール方法は kickstart.sh を使うこと。
+しかし、netdataのページで推奨されているcommandをUbuntu 16.04で実行すると, netdata-repo-edge_5-1+ubuntu16.04_all.deb が 404 になる。
 
 
-static-only でインストールすれば, Ubuntu 16.04 でも動く.
+static-only でインストールすれば, Ubuntu 16.04 でも動く。
 
 
 ## 成功例
@@ -25,7 +25,7 @@ curl https://get.netdata.cloud/kickstart.sh > /tmp/netdata-kickstart.sh && sh /t
 
 ## 失敗例
 
-kickstart.sh でインストールしようとすると,netdata-repo-edge_5-1+ubuntu16.04_all.deb が 404 になる.
+kickstart.sh でインストールしようとすると,netdata-repo-edge_5-1+ubuntu16.04_all.deb が 404 になる。
 
 ```sh
 isucon@ip-172-31-44-71:~$ curl https://get.netdata.cloud/kickstart.sh > /tmp/netdata-kickstart.sh && sh /tmp/netdata-kickstart.sh --nightly-channel --claim-token <token> --claim-rooms <room-uuid> --claim-url https://app.netdata.cloud
