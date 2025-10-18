@@ -30,7 +30,7 @@ Proxmox VEでは、cloud-init用のドライブ (ide2 など) にユーザーデ
 
 ## cloud-initのsnippetを作成する
 
-以下のようにcloud-initのsnippetを作成しました。
+次のようにcloud-initのsnippetを作成しました。
 ubuntuユーザーを作成し、sudo権限を付与し、SSH公開鍵認証を設定しています。
 基本的なパッケージのインストールとタイムゾーンの設定、UFWの設定も行っています。
 
@@ -91,7 +91,7 @@ lvmthin: local-lvm
 まずは仮想マシンの基本構成を作成します。  
 ここではメモリ4GB・2コア・VirtIOネットワークを指定しています。
 
-以下のようにqmコマンドを使ってVMを作成します。
+次のようにqmコマンドを使ってVMを作成します。
 テンプレート化するために、DHCPでIPアドレスを取得するように設定しています。
 
 元となるimageは、cloud-init対応のUbuntu24.04をqcow2形式でダウンロードして、`/var/lib/vz/template/qcow2/`に保存しておきます。
@@ -119,7 +119,7 @@ sudo qm set $VMID --serial0 socket --vga serial0
 sudo qm set $VMID --agent enabled=1
 ```
 
-以下のように起動します。
+次のように起動します。
 直前に`cloudinit update`でcloud-initの設定を反映させます。
 
 ```bash
@@ -128,7 +128,7 @@ sudo qm start $VMID
 sudo qm terminal $VMID
 ```
 
-cloud-final.serviceが完了していることを確認する
+cloud-final.serviceが完了していることを確認します。
 
 ```
 [   85.302809] cloud-init[1060]: Cloud-init v. 25.2-0ubuntu1~24.04.1 finished at Sat, 18 Oct 2025 05:14:00 +0000. Datasource DataSourceNoCloud [seed=/dev/sr0].  Up 85.29 seconds
@@ -149,7 +149,7 @@ sudo qm template $VMID
 ## テンプレートからVMを立ち上げる
 
 
-以下のようにテンプレートからVMを立ち上げます。
+次のようにテンプレートからVMを立ち上げます。
 今回は立ち上げる際に固定IPアドレスを設定しています。
 立ち上げたVMはsshで接続できます。
 
