@@ -9,9 +9,9 @@ categories: ["ubuntu"]
 draft: false
 ---
 
-Ubuntu 22.04で日本語環境を構築した際、**VSCodeやChrome（Electron系アプリ）で日本語入力ができない問題**に遭遇しました。
+Ubuntu 22.04で日本語環境を構築した際、VSCodeやChrome（Electron系アプリ）で日本語入力ができない問題に遭遇しました。
 
-結論として、**fcitx5へ移行したら解決した**ので、備忘録として残します。
+結論として、fcitx5へ移行したら解決したので、備忘録として残します。
 
 ## 起きていた問題
 
