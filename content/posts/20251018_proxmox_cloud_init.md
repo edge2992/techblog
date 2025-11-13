@@ -9,8 +9,6 @@ categories: ["proxmoxVE","cloud-init","Ubuntu"]
 draft: false
 ---
 
-## 概要
-
 Proxmox VE で Ubuntu 24.04 の VM をすぐに作成し、検証を繰り返せる環境を用意したいと思い、cloud-init を使って VM の雛形を作成しました。
 
 
@@ -73,7 +71,7 @@ runcmd:
 /etc/pve/storage.cfgで確認できます。
 
 
-```bash
+```sh
 sudo cat /etc/pve/storage.cfg
 
 dir: local
@@ -96,7 +94,7 @@ lvmthin: local-lvm
 
 元となるimageは、cloud-init対応のUbuntu24.04をqcow2形式でダウンロードして、`/var/lib/vz/template/qcow2/`に保存しておきます。
 
-```
+```sh
 VMID=130
 VMNAME=ubuntu-24-cloudinit
 STORAGE=local-lvm
@@ -130,7 +128,7 @@ sudo qm terminal $VMID
 
 cloud-final.serviceが完了していることを確認します。
 
-```
+```sh
 [   85.302809] cloud-init[1060]: Cloud-init v. 25.2-0ubuntu1~24.04.1 finished at Sat, 18 Oct 2025 05:14:00 +0000. Datasource DataSourceNoCloud [seed=/dev/sr0].  Up 85.29 seconds
 [  OK  ] Finished cloud-final.service - Cloud-init: Final Stage.
 [  OK  ] Reached target cloud-init.target - Cloud-init target.
