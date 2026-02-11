@@ -17,3 +17,13 @@ hugo new posts/<FILE_NAME>.md
 ```sh
 hugo server
 ```
+
+### cardを作成する
+
+- tcardgenをインストールする
+
+```
+go install github.com/Ladicle/tcardgen@latest
+```
+
+2026/02/11 23:03:18 open ./static/fonts/kinto/Kinto Sans: no such file or directory
