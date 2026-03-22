@@ -18,31 +18,26 @@
     {{ $main_style := resources.Get "css/main.scss" | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $main_style.Permalink }}"/>
 
-    <!-- Uncomment to add custom styles -->
-    <!-- Modify the custom.scss file inside assets > css to use scss -->
+    <!-- Custom styles -->
     {{ $custom_style := resources.Get "css/custom.scss" | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $custom_style.Permalink }}"/>
 
-    <!-- Modify the custom.css file inside static > css to use vanilla css -->
-    <!-- <link type="text/css" rel="stylesheet" href="{{ "/" | relURL }}css/custom.css"> -->
-
     <!-- syntax highlight -->
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/syntax.css" />
-
-    {{ if .Store.Get "hasMermaid" }}
-    <script type="module">
-      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
-      mermaid.initialize({ startOnLoad: true });
-    </script>
-    {{ end }}
+    <link rel="stylesheet" href="{{ "css/syntax.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ "css/syntax-dark.css" | relURL }}" />
 
     {{ with .OutputFormats.Get "RSS" }}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end }}
+    {{ partial "seo.html" . }}
+
     {{ if not hugo.IsServer }}
       {{ template "_internal/google_analytics.html" . }}
     {{ end }}
-
-    {{ template "_internal/opengraph.html" . }}
-    {{ template "_internal/twitter_cards.html" . }}
+    <script>
+      (function() {
+        var theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
 </head>
