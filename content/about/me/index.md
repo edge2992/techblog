@@ -25,6 +25,10 @@ Rakutenでエンジニアをしています。
 
 [skills](./../skills/)を参照してください。
 
+## 登壇履歴
+
+[talks](./../talks/)を参照してください。
+
 ## 連絡先
 
 [@edgissa](https://twitter.com/edgissa)のDMまで。
