@@ -4,6 +4,10 @@
 
 テックブログです。
 
+## セットアップ
+
+新しいマシンでの環境構築手順は [docs/setup.md](docs/setup.md) を参照。
+
 ## HOW TO
 
 ### 記事作成
@@ -12,18 +16,16 @@
 hugo new posts/<FILE_NAME>.md
 ```
 
-### ビルド
+### ビルド・プレビュー
 
 ```sh
 hugo server
 ```
 
-### cardを作成する
+### OGP画像を作成する
 
-- tcardgenをインストールする
-
-```
-go install github.com/Ladicle/tcardgen@latest
+```sh
+sh ./makeogp.sh ./content/posts/<FILE_NAME>.md
 ```
 
-2026/02/11 23:03:18 open ./static/fonts/kinto/Kinto Sans: no such file or directory
+`static/img/og/<FILE_NAME>.png` が生成される。front matter を書き終えてから実行すること。
