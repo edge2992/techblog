@@ -1,0 +1,26 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "enabledManagers": ["custom.regex", "git-submodules"],
+  "git-submodules": {
+    "enabled": true
+  },
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Keep the Hugo version used by Netlify up to date",
+      "managerFilePatterns": ["/^netlify\\.toml$/"],
+      "matchStrings": ["HUGO_VERSION = \"(?<currentValue>[^\"]+)\""],
+      "depNameTemplate": "gohugoio/hugo",
+      "datasourceTemplate": "github-releases",
+      "extractVersionTemplate": "^v(?<version>.+)$"
+    }
+  ],
+  "packageRules": [
+    {
+      "description": "Update all Netlify contexts in one PR",
+      "matchDepNames": ["gohugoio/hugo"],
+      "groupName": "Hugo"
+    }
+  ]
+}

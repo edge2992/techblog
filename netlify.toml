@@ -6,7 +6,7 @@ command = "hugo --gc --minify -b $URL"
 TZ = "Asia/Tokyo"
 
 [context.production.environment]
-HUGO_VERSION = "0.142.0"
+HUGO_VERSION = "0.168.0"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
 
@@ -14,20 +14,20 @@ HUGO_ENABLEGITINFO = "true"
 command = "hugo --gc --minify --enableGitInfo"
 
 [context.split1.environment]
-HUGO_VERSION = "0.142.0"
+HUGO_VERSION = "0.168.0"
 HUGO_ENV = "production"
 
 [context.deploy-preview]
 command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
-HUGO_VERSION = "0.142.0"
+HUGO_VERSION = "0.168.0"
 
 [context.branch-deploy]
 command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy.environment]
-HUGO_VERSION = "0.142.0"
+HUGO_VERSION = "0.168.0"
 
 [context.next.environment]
 HUGO_ENABLEGITINFO = "true"
@@ -36,3 +36,26 @@ HUGO_ENABLEGITINFO = "true"
 from = "/npmjs/*"
 to = "/npmjs/"
 status = 200
+
+# Security headers. The CSP starts in report-only mode: check the browser console
+# for violations (GA, Disqus, Mermaid) before switching it to Content-Security-Policy.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+    Content-Security-Policy-Report-Only = """\
+      default-src 'self'; \
+      script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://*.disqus.com https://*.disquscdn.com; \
+      style-src 'self' 'unsafe-inline' https://*.disquscdn.com; \
+      img-src 'self' data: https:; \
+      font-src 'self' data:; \
+      connect-src 'self' https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://*.disqus.com; \
+      frame-src https://disqus.com https://*.disqus.com; \
+      frame-ancestors 'none'; \
+      base-uri 'self'; \
+      form-action 'self'; \
+      object-src 'none'"""
